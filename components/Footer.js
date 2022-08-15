@@ -1,19 +1,23 @@
 import styled from 'styled-components'
 
 const FooterStyled = styled.footer`
-text-align: center;
-font-size: 1rem;
-background-color: var(--teal-1, transparent);
-padding: 2rem 0px;
-margin-top: 4rem;
-a{text-decoration:0px solid black;}
-a:hover {
-    border-bottom:1px solid black;
-}
-`
+  text-align: center;
+  font-size: 1rem;
+  background-color: var(--dark);
+  background-image: var(--noise);
+  padding: 2rem 0px;
+  color: white;
+  margin-top: 4rem;
+  a {
+    text-decoration: 0px solid black;
+  }
+  a:hover {
+    border-bottom: 1px solid white;
+  }
+`;
 
 const Footer = () => {
-    return <FooterStyled> &copy; Ashley Kunsa | Website by <a href="https://www.studio303.dev">Studio303</a></FooterStyled>;
+    return <FooterStyled> <a href="https://www.rocky.edu/library">RMC Library</a></FooterStyled>;
 }
  
 export default Footer;

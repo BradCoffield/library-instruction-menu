@@ -1,13 +1,22 @@
 // import MainNavStyles from './styles/MainNavStyles';
 // import NavLi from './NavLi';
 // import HamburgerMenu from "./HamburgerMenu";
+import Link from "next/link";
+import styled from 'styled-components'
 
+const StyledNav = styled.nav`
+  padding: 2rem 0;
+  text-align: center;
+  color: white;
+  background-color: var(--dark);
+  background-image: var(--noise);
+`;
 
 export default function Nav() {
   return (
-    <nav>
-     <h1>RMC Library Instruction Menu</h1>
-    </nav>
+    <StyledNav>
+     <h1><Link href="/">RMC Library Instruction Menu</Link></h1>
+    </StyledNav>
     // <MainNavStyles>
     //   <div id="nav-left">
     //     <span id="h1-wrap">

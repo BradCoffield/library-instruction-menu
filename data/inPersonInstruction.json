@@ -1,0 +1,50 @@
+[{
+        "title": "RMC Library Foundations",
+        "description": "A crucial introduction, for undergraduate and graduate students, to the library and it's foundtional services. It utilizes the library website as a jumping off point to orient students with what resources we have (print and online, books, databases etc)",
+        "timingInMinutes": 20
+    },
+    {
+        "title": "Database Searching: Basics",
+        "description": "What is a database? What is it good for? What types of databases do we have at RMC and how are they located. Basics of database searching. Proquest is the base example but others can be used instead/in addition.",
+        "timingInMinutes": 15
+    },
+    {
+        "title": "Database Searching: Advanced Features",
+        "description": "Things like checkboxes, saving/sending results, advanced search etc",
+        "timingInMinutes": 10
+    },
+    {
+        "title": "Search Strategy Essentials",
+        "description": "insert search strategy essentials description content here",
+        "timingInMinutes": 20
+    },
+    {
+        "title": "Evaluating Resources",
+        "description": "Especially crucial in our 'post-truth' society, students will learn ... ",
+        "timingInMinutes": 15
+    },
+    {
+        "title": "Fighting Fake News and Malicious Information Online",
+        "description": "...etc... some overlap with the evaluating resources session.",
+        "timingInMinutes": 0
+    },
+    {
+        "title": "Developing a Research Topic",
+        "description": "Selecting a Topic | Develop Research Questions | Identify Keywords | Find Background Information | Refine a Topic",
+        "timingInMinutes": 0
+    },
+    {
+        "title": "Avoiding Plagiarism",
+        "description": "Helping students better understand what plagiarism is and how to avoid unintentional plagiarism. Key topics are citing and quoting/summ/paraphrasing.",
+        "timingInMinutes": 40
+    },
+    {
+        "title": "Refworks",
+        "description": "Refworks is a powerful research management tool that RMC subscribes to and that graduates will continue to be able to use.",
+        "timingInMinutes": 20
+    },
+    {
+        "title": "Citing: How to think like someone who actually cites things",
+        "description": "Tools that generate citations are wonderful time-savers but for various reasons they can be prone to errors. If one wants to be sure they've cited something correctly they need to understand certain through processes and be familiar with citation style rules. Session will focus on either MLA or APA, and focuses on....",
+        "timingInMinutes": 0
+    }]

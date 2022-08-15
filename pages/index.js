@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Link from "next/link";
 
  
 
@@ -16,12 +17,13 @@ export default function Home() {
       </p>
       <p>To those ends we offer in-class (physical or with Google Meet) instruction sessions customized to your class's needs. In addition to this classic form of library instruction we now offer asyncronous video modules, with included assessments, that you can embed into your Moodle classrooms!</p>
       <p>This site is here to help you explore the options available to you!</p>
-      <p><h2>Explore</h2>
+      <p><h2>Explore Learning Options</h2>
       <ul>
-        <li>Classroom Instruction</li>
-        <li>Asynchronous </li>
+        <li> <Link href="/classroom-instruction">Classroom Instruction</Link> </li>
+        <li><Link href="/asynchronous-instruction">Asynchronous Instruction</Link> </li>
       </ul>
       </p>
+      <p><button>Contact Us</button></p>
     </div>
   );
 }
