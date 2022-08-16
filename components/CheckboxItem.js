@@ -106,7 +106,7 @@ const Unit = styled.div`
 export default function CheckboxItem(props) {
   return (
     <Unit>
-      <Field className="form-control" type="checkbox" name="menu-items" value={props.title} />
+      <Field className="form-control" type="checkbox" name="menuItems" value={props.title} />
       <label htmlFor={props.title}>{props.title}  </label>
       <p>{props.description}</p>
     </Unit>

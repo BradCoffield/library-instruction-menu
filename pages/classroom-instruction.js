@@ -66,7 +66,7 @@ export default function ClassroomInstruction() {
           return errors;
         }}
       >
-        {() => (
+        {(formikProps) => (
           <Form className="wrap-contact100">
             {/*
               Multiple checkboxes with the same name attribute, but different
@@ -74,7 +74,7 @@ export default function ClassroomInstruction() {
               bind the checked values to a single array for your benefit. All the add and remove
               logic will be taken care of for you.
             */}
-            {/* <div id="checkbox-group">Checked</div> */}
+
             <div role="group" aria-labelledby="checkbox-group">
               {inPersonInstruction.map((sessionData) => (
                 <CheckboxItem
@@ -84,22 +84,9 @@ export default function ClassroomInstruction() {
                   description={sessionData.description}
                 ></CheckboxItem>
               ))}
-              {/* <label>
-              <Field type="checkbox" name="menu-items" value="One" />
-              One
-            </label>
-            <label>
-              <Field type="checkbox" name="menu-items" value="Two" />
-              Two
-            </label>
-            <label>
-              <Field type="checkbox" name="menu-items" value="Three" />
-              Three
-            </label> */}
             </div>
             <Formwrap>
-              <h2>Place your 'order'!</h2>
-              {" "}
+              <h2>Place your 'order'!</h2>{" "}
               <div className="form-unit">
                 <label htmlFor="name">Name: </label>
                 <Field name="name" />
@@ -122,7 +109,8 @@ export default function ClassroomInstruction() {
               <div className="form-unit">
                 {" "}
                 Your selections:
-                Yum! 
+                {formikProps.values.menuItems}
+                {JSON.stringify(formikProps.values.menuItems, null, 2)}
               </div>
               <button type="submit">Send</button>{" "}
             </Formwrap>
