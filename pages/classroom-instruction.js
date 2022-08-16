@@ -31,6 +31,12 @@ let Formwrap = styled.div`
   }
 `;
 
+const encode = (data) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
+
 export default function ClassroomInstruction() {
   return (
     <div>
@@ -48,8 +54,21 @@ export default function ClassroomInstruction() {
           message: "",
         }}
         onSubmit={(values, actions) => {
-          alert(JSON.stringify(values, null, 2));
-          actions.setSubmitting(false);
+          fetch("/", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded",
+            },
+            body: encode({ "form-name": "instructionMenu", ...values }),
+          })
+            .then(() => {
+              alert("Success");
+              actions.resetForm();
+            })
+            .catch(() => {
+              alert("Error");
+            })
+            .finally(() => actions.setSubmitting(false));
         }}
         validate={(values) => {
           const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
@@ -67,7 +86,11 @@ export default function ClassroomInstruction() {
         }}
       >
         {(formikProps) => (
-          <Form className="wrap-contact100">
+          <Form
+            className="wrap-contact100"
+            name="instructionMenu"
+            data-netlify={true}
+          >
             {/*
               Multiple checkboxes with the same name attribute, but different
               value attributes will be considered a "checkbox group". Formik will automagically
@@ -110,9 +133,10 @@ export default function ClassroomInstruction() {
                 {" "}
                 Your selections:
                 {/* {formikProps.values.menuItems} */}
-                {formikProps.values.menuItems && formikProps.values.menuItems.map((item) => (
-                  <div key={item}>{item}</div>
-                ))}
+                {formikProps.values.menuItems &&
+                  formikProps.values.menuItems.map((item) => (
+                    <div key={item}>{item}</div>
+                  ))}
               </div>
               <button type="submit">Send</button>{" "}
             </Formwrap>
