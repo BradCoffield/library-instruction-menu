@@ -109,8 +109,10 @@ export default function ClassroomInstruction() {
               <div className="form-unit">
                 {" "}
                 Your selections:
-                {formikProps.values.menuItems}
-                {JSON.stringify(formikProps.values.menuItems, null, 2)}
+                {/* {formikProps.values.menuItems} */}
+                {formikProps.values.menuItems && formikProps.values.menuItems.map((item) => (
+                  <div key={item}>{item}</div>
+                ))}
               </div>
               <button type="submit">Send</button>{" "}
             </Formwrap>
